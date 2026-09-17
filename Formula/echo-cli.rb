@@ -8,9 +8,15 @@ class EchoCli < Formula
   url "https://f003.backblazeb2.com/file/voxsprint-releases/echo-cli-0.8.3-macos-arm64.tar.gz"
   version "0.8.3"
   sha256 "89fc53a37f2e4f2ab091aeb2caff2e4390ccee2f6e246e337f228e3f8d90cd66"
+  revision 1
 
   depends_on arch: :arm64
   depends_on macos: :monterey
+
+  # Homebrew normally rewrites @rpath dylib IDs and ad-hoc signs the changed
+  # files. That breaks hardened-runtime loading because echo-cli retains its
+  # Developer ID Team ID. These libraries are already relocatable and signed.
+  preserve_rpath
 
   def install
     libexec.install Dir["*"]
