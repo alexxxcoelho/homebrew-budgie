@@ -5,10 +5,9 @@
 class EchoCli < Formula
   desc "Local transcription, speech and BudgieScribe workflows from the terminal"
   homepage "https://gobudgie.com/echo"
-  url "https://f003.backblazeb2.com/file/voxsprint-releases/echo-cli-0.8.3-macos-arm64.tar.gz"
-  version "0.8.3"
-  sha256 "89fc53a37f2e4f2ab091aeb2caff2e4390ccee2f6e246e337f228e3f8d90cd66"
-  revision 1
+  url "https://f003.backblazeb2.com/file/voxsprint-releases/echo-cli-0.8.4-macos-arm64.tar.gz"
+  version "0.8.4"
+  sha256 "97f5c1b1547dc052898ebc8cb9ecb811c0a0d41ac504dd655cfb712a072df2e8"
 
   depends_on arch: :arm64
   depends_on macos: :monterey
